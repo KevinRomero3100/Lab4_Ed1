@@ -61,7 +61,6 @@ namespace CustumGenerics.Structures
                 postOrder(node.left);
                 postOrder(node.right);
                 list.Add(node.Value);
-
             }
         }
         public List<T>PostOrder()

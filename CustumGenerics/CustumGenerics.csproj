@@ -45,6 +45,7 @@
     <Compile Include="Structures\AVL.cs" />
     <Compile Include="Structures\BinaryTree.cs" />
     <Compile Include="Structures\HashTable.cs" />
+    <Compile Include="Structures\Heep.cs" />
     <Compile Include="Structures\Node.cs" />
     <Compile Include="Structures\TAVL.cs" />
   </ItemGroup>
