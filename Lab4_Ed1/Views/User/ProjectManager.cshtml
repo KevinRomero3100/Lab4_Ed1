@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Lab4_Ed1.Models.Work>
+
+@{
+    ViewBag.Title = "ProjectManager";
+}
+
+<h2>ProjectManager</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Prioridad")
+        </th>
+        <th>
+            @Html.DisplayName("Titulo")
+        </th>
+        <th>
+            @Html.DisplayName("Descripción")
+        </th>
+        <th>
+            @Html.DisplayName("Proyecto")
+        </th>
+        <th>
+            @Html.DisplayName("Fehca de Entrega")
+        </th>
+        <th>
+            @Html.DisplayName("Usuario")
+        </th>
+        <th></th>
+    </tr>
+    @if (Model != null)
+    {
+
+
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Priority)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TaskDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Project)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeliveryDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+            </tr>
+        }
+    }
+</table>
+<div>
+    @Html.ActionLink("Cerrar sesión", "logOut", "User")
+</div>

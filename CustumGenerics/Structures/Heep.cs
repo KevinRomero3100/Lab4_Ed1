@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustumGenerics.Structures
 {
-    class Heep<T>
+    public class Heep<T>
     {
         private static Stack<string> Travel = new Stack<string>();
         private static Stack<string> TravelOut = new Stack<string>();

@@ -48,6 +48,26 @@ namespace CustumGenerics.Structures
                 if (hashTable[pos1, pos2] == null)
                 {
                     hashTable[pos1, pos2] = value;
+                    return true;
+                }
+                else
+                {
+                    for (int i = 0; i < 10; i++)
+                    {
+                        if (hashTable[pos1, i] == null)
+                        {
+                            hashTable[pos1, i] = value;
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+            else
+            {
+                if (int.Parse(compare.DynamicInvoke(key, value).ToString()) == 0)
+                {
+                    return false;
                 }
                 else
                 {
@@ -59,12 +79,8 @@ namespace CustumGenerics.Structures
                             i = 10;
                         }
                     }
+                    return true;
                 }
-                return true;
-            }
-            else
-            {
-                return false;
             }
             
         }
